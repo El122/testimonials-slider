@@ -1,0 +1,180 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+main {
+  position: relative;
+  background-size: contain;
+  background-position: right bottom;
+  margin-bottom: 50px;
+}
+
+main .btns {
+  position: absolute;
+  right: 60%;
+  bottom: 40px;
+  background-color: #fff;
+  border-radius: 40px;
+}
+
+main .btns button {
+  padding: 15px;
+  border: 0;
+  background-color: inherit;
+  outline: none;
+}
+
+main .btns button:nth-child(1) {
+  border-radius: 40px 0 0 40px;
+}
+
+main .btns button:nth-child(2) {
+  border-radius: 0 40px 40px 0;
+}
+
+main .btns button:hover {
+  background-color: rgba(186, 186, 207, 0.2);
+}
+
+.slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  -webkit-animation-name: sliderAnimation;
+  animation-name: sliderAnimation;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+}
+
+.slide .text {
+  z-index: 10;
+  margin-right: -100px;
+  width: 60%;
+  background: url(images/pattern-quotes.svg) 0 no-repeat;
+  background-position: top left 20%;
+  background-size: auto;
+  font-size: 32px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  color: #202046;
+}
+
+.slide .text h2 {
+  font-weight: 700;
+  font-size: 18px;
+  display: inline;
+}
+
+.slide .text p.specialize {
+  font-weight: 500;
+  font-size: 18px;
+  display: inline;
+  color: #babacf;
+}
+
+.slide .photo {
+  position: relative;
+  background: url(images/pattern-bg.svg) 0 no-repeat;
+  background-size: contain;
+  padding: 50px;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  -webkit-box-shadow: 7px 19px 36px -8px #babacf;
+  box-shadow: 7px 19px 36px -8px #babacf;
+}
+
+.slide:nth-child(2) {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .slide {
+    width: 95%;
+  }
+  .slide .text {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main .btns {
+    text-align: center;
+    right: 42%;
+    left: 42%;
+    margin: 0;
+    bottom: 30px;
+  }
+  .slide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .slide .text {
+    margin-right: 0;
+    width: 95%;
+    background-position: top center;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .slide .text h2 {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .slide .text p.specialize {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 605px) {
+  main .btns {
+    right: 40%;
+    left: 40%;
+  }
+  main .btns button {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  main .btns button {
+    padding: 7px;
+  }
+}
+
+@-webkit-keyframes sliderAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sliderAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */
